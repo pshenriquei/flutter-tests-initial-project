@@ -1,4 +1,4 @@
-# flutter_tests_automatizados_2_9_0
+# flutter-tests-initial-project
 
 A new Flutter project.
 
