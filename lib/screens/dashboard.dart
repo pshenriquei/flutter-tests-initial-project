@@ -6,37 +6,39 @@ class Dashboard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Dashboard'),
-      ),
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: <Widget>[
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Image.asset('images/bytebank_logo.png'),
-          ),
-          Container(
-            height: 120,
-            child: ListView(
-              scrollDirection: Axis.horizontal,
-              children: <Widget>[
-                _FeatureItem(
-                  'Transfer',
-                  Icons.monetization_on,
-                  onClick: () => _showContactsList(context),
+        appBar: AppBar(
+          title: Text('Dashboard'),
+        ),
+        body: SingleChildScrollView(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: <Widget>[
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Image.asset('images/bytebank_logo.png'),
+              ),
+              Container(
+                height: 120,
+                child: ListView(
+                  scrollDirection: Axis.horizontal,
+                  children: <Widget>[
+                    _FeatureItem(
+                      'Transfer',
+                      Icons.monetization_on,
+                      onClick: () => _showContactsList(context),
+                    ),
+                    _FeatureItem(
+                      'Transaction Feed',
+                      Icons.description,
+                      onClick: () => _showTransactionsList(context),
+                    ),
+                  ],
                 ),
-                _FeatureItem(
-                  'Transaction Feed',
-                  Icons.description,
-                  onClick: () => _showTransactionsList(context),
-                ),
-              ],
-            ),
+              ),
+            ],
           ),
-        ],
-      ),
+        ),
     );
   }
 
