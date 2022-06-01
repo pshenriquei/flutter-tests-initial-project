@@ -9,16 +9,16 @@ class Dashboard extends StatelessWidget {
         appBar: AppBar(
           title: Text('Dashboard'),
         ),
-        body: SingleChildScrollView(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: <Widget>[
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Image.asset('images/bytebank_logo.png'),
-              ),
-              Container(
+        body: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: <Widget>[
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Image.asset('images/bytebank_logo.png'),
+            ),
+            SingleChildScrollView(
+              child: Container(
                 height: 120,
                 child: ListView(
                   scrollDirection: Axis.horizontal,
@@ -36,8 +36,8 @@ class Dashboard extends StatelessWidget {
                   ],
                 ),
               ),
-            ],
-          ),
+            ),
+          ],
         ),
     );
   }
@@ -75,7 +75,7 @@ class _FeatureItem extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.all(8.0),
       child: Material(
-        color: Theme.of(context).primaryColor,
+        color: Theme.of(context).colorScheme.primary,
         child: InkWell(
           onTap: () => onClick(),
           child: Container(
