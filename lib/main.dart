@@ -10,10 +10,12 @@ class BytebankApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
+    final ThemeData theme = ThemeData();
+
     return MaterialApp(
-      theme: ThemeData(
-        primaryColor: Colors.green[900],
-        accentColor: Colors.blueAccent[700],
+      theme: theme.copyWith(
+        colorScheme:theme.colorScheme.copyWith( primary: Colors.green[900], secondary: Colors.blueAccent[700]),
         buttonTheme: ButtonThemeData(
           buttonColor: Colors.blueAccent[700],
           textTheme: ButtonTextTheme.primary,
