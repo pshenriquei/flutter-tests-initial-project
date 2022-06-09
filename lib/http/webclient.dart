@@ -10,7 +10,7 @@ final Client client = InterceptedClient.build(
 
 
 
-Uri baseUrl = Uri.http('192.168.0.180:8080','transactions');
+Uri baseUrl = Uri.https('427c-2804-14d-5c42-4486-50da-511c-7e5-d397.sa.ngrok.io','transactions');
 
 //TODO: Altere para o seu Ip local
 /*
